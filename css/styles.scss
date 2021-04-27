@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+$font:'Poppins', sans-serif;
+$bgColor: #fafafa;
+$color1:hsl(234, 12%, 34%);
+$color2:hsl(229, 6%, 66%);
+$color3:hsl(0, 0%, 98%);
+$red:hsl(0, 78%, 62%);
+$cyan:hsl(180, 62%, 55%);
+$orange:hsl(34, 97%, 64%);
+$blue:hsl(212, 86%, 64%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body{
+    background-color: $bgColor;
+    font-family: $font;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.header{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    text-align: center;
+    .header__title{
+        font-weight: 200;
+        color:$color2;
+        margin-bottom: 4px;
+        font-size: 1.6em;
+    }
+    .header__title-bold{
+        font-weight: 600;
+        color: $color1;
+        margin-bottom: 14px;
+    }
+    .header__p{
+        color: $color2;
+    }
+}
+
+
+
+.card{
+    background-color: white;
+    padding: 30px;
+    border-top: 4px solid $cyan;
+    border-radius: 8px;
+    margin-bottom: 36px;
+    box-shadow:  20px 20px 49px #bebebe,
+             -20px -20px 49px #ffffff;
+
+    .card__title{
+        font-size: 1.4em;
+        color: $color1;
+    }
+    .card__p{
+        font-size: 0.8em;
+        color: $color2;
+        line-height: 26px;
+    }
+    .card__icon{
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+        .icon{    
+            content: url('../res/icon-supervisor.svg');
+        }
+    }
+}
+
+.card:nth-of-type(2){
+    border-top: 4px solid $red;
+    .card__icon{
+        .icon{    
+            content: url('../res/icon-team-builder.svg');
+        }
+    }
+}
+
+.card:nth-of-type(3){
+    border-top: 4px solid $orange;
+    .card__icon{
+        .icon{    
+            content: url('../res/icon-karma.svg');
+        }
+    }
+}
+
+.card:nth-of-type(4){
+    border-top: 4px solid $blue;
+    margin-bottom: 100px;
+    .card__icon{
+        .icon{    
+            content: url('../res/icon-calculator.svg');
+        }
+    }
+}

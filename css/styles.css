@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.header {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.header .header__title {
+  font-weight: 200;
+  color: #a3a5ae;
+  margin-bottom: 4px;
+  font-size: 1.6em;
+}
+.header .header__title-bold {
+  font-weight: 600;
+  color: #4c4e61;
+  margin-bottom: 14px;
+}
+.header .header__p {
+  color: #a3a5ae;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-top: 4px solid #45d3d3;
+  border-radius: 8px;
+  margin-bottom: 36px;
+  box-shadow: 20px 20px 49px #bebebe, -20px -20px 49px #ffffff;
+}
+.card .card__title {
+  font-size: 1.4em;
+  color: #4c4e61;
+}
+.card .card__p {
+  font-size: 0.8em;
+  color: #a3a5ae;
+  line-height: 26px;
+}
+.card .card__icon {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.card .card__icon .icon {
+  content: url("../res/icon-supervisor.svg");
+}
+
+.card:nth-of-type(2) {
+  border-top: 4px solid #ea5353;
+}
+.card:nth-of-type(2) .card__icon .icon {
+  content: url("../res/icon-team-builder.svg");
+}
+
+.card:nth-of-type(3) {
+  border-top: 4px solid #fcaf4a;
+}
+.card:nth-of-type(3) .card__icon .icon {
+  content: url("../res/icon-karma.svg");
+}
+
+.card:nth-of-type(4) {
+  border-top: 4px solid #549ef2;
+  margin-bottom: 100px;
+}
+.card:nth-of-type(4) .card__icon .icon {
+  content: url("../res/icon-calculator.svg");
+}
+
+/*# sourceMappingURL=styles.css.map */
