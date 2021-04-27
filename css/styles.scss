@@ -1,27 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
-$font:'Poppins', sans-serif;
+$font:'Poppins',
+sans-serif;
 $bgColor: #fafafa;
-$color1:hsl(234, 12%, 34%);
-$color2:hsl(229, 6%, 66%);
-$color3:hsl(0, 0%, 98%);
-$red:hsl(0, 78%, 62%);
-$cyan:hsl(180, 62%, 55%);
-$orange:hsl(34, 97%, 64%);
-$blue:hsl(212, 86%, 64%);
-
-*{
+$color1:hsl(234,
+12%,
+34%);
+$color2:hsl(229,
+6%,
+66%);
+$color3:hsl(0,
+0%,
+98%);
+$red:hsl(0,
+78%,
+62%);
+$cyan:hsl(180,
+62%,
+55%);
+$orange:hsl(34,
+97%,
+64%);
+$blue:hsl(212,
+86%,
+64%);
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
 }
 
-body{
+body {
     background-color: $bgColor;
     font-family: $font;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -29,80 +43,119 @@ body{
     width: 80%;
 }
 
-.header{
-    margin-top: 100px;
+@media only screen and (min-width: 768px) {
+    * {
+        font-size: 18px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.header {
+    margin-top: 80px;
     margin-bottom: 80px;
     text-align: center;
-    .header__title{
+    .header__title {
         font-weight: 200;
-        color:$color2;
+        color: $color2;
         margin-bottom: 4px;
         font-size: 1.6em;
     }
-    .header__title-bold{
+    .header__title-bold {
         font-weight: 600;
         color: $color1;
         margin-bottom: 14px;
     }
-    .header__p{
+    .header__p {
         color: $color2;
     }
 }
 
+@media only screen and (min-width: 768px) {
+    .header {
+        grid-column: 1/4;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        .header__title {
+            font-size: 1.8em;
+        }
+    }
+}
 
-
-.card{
+.card {
     background-color: white;
     padding: 30px;
     border-top: 4px solid $cyan;
     border-radius: 8px;
     margin-bottom: 36px;
-    box-shadow:  20px 20px 49px #bebebe,
-             -20px -20px 49px #ffffff;
-
-    .card__title{
+    box-shadow: 20px 20px 49px #bebebe, -20px -20px 49px #ffffff;
+    .card__title {
         font-size: 1.4em;
         color: $color1;
     }
-    .card__p{
+    .card__p {
         font-size: 0.8em;
         color: $color2;
         line-height: 26px;
     }
-    .card__icon{
+    .card__icon {
         margin-top: 30px;
         display: flex;
         justify-content: flex-end;
-        .icon{    
+        .icon {
             content: url('../res/icon-supervisor.svg');
         }
     }
 }
 
-.card:nth-of-type(2){
+@media only screen and (min-width: 768px) {
+    .card {
+        margin: 20px;
+    }
+}
+
+.card:nth-of-type(2) {
     border-top: 4px solid $red;
-    .card__icon{
-        .icon{    
+    .card__icon {
+        .icon {
             content: url('../res/icon-team-builder.svg');
         }
     }
 }
 
-.card:nth-of-type(3){
+.card:nth-of-type(3) {
     border-top: 4px solid $orange;
-    .card__icon{
-        .icon{    
+    .card__icon {
+        .icon {
             content: url('../res/icon-karma.svg');
         }
     }
 }
 
-.card:nth-of-type(4){
+.card:nth-of-type(4) {
     border-top: 4px solid $blue;
     margin-bottom: 100px;
-    .card__icon{
-        .icon{    
+    .card__icon {
+        .icon {
             content: url('../res/icon-calculator.svg');
         }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card:nth-of-type(1) {
+        transform: translateY(150px);
+    }
+    .card:nth-of-type(2) {
+        grid-column: 2/3;
+    }
+    .card:nth-of-type(3) {
+        transform: translateY(150px);
+    }
+    .card:nth-of-type(4) {
+        grid-column: 2/3;
     }
 }
